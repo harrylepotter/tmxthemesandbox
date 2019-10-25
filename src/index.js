@@ -7,16 +7,23 @@ import * as SimpleTabs from "./SimpleTabs";
 import AGTable from "./AGTable.js";
 import "./styles.scss";
 
-window.alert("oi hello");
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div>
-        {/* <Button disableRipple="true">Button</Button>
+      <div class="buttons">
+        <p>Buttons:</p>
+        <Button disableRipple="true">Button</Button>
         <Button disabled>disabled button</Button>
-        {SimpleTabs.default()} */}
       </div>
-      <AGTable />
+      <div class="tabs">
+        <p>Tabs:</p>
+        {SimpleTabs.default()}
+      </div>
+      <div class="tables">
+        <p>Tables:</p>
+        <AGTable/>        
+      </div>
+    
     </ThemeProvider>
   );
 }

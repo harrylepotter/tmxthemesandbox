@@ -1,13 +1,10 @@
 import { AgGridReact } from "ag-grid-react";
 import React from "react";
 
-// import "ag-grid-community/src/styles/ag-grid.scss";
-// import "ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham.scss";
+import "ag-grid-community/src/styles/ag-grid.scss";
+import "ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham.scss";
 
 import "./tmx-ag-grid.scss";
-
-// import "ag-grid-community/dist/styles/ag-grid.css";
-// import "ag-grid-community/dist/styles/ag-theme-balham.css";
 
 class AGTable extends React.Component {
   constructor(props) {
@@ -33,7 +30,7 @@ class AGTable extends React.Component {
         className="ag-theme-balham"
         style={{
           height: "33vh",
-          width: "100%"
+          width: "600px"
         }}
       >
         <AgGridReact

@@ -1,64 +1,96 @@
+
+
 // To override the styles, refer to the variables predefined in https://www.ag-grid.com/javascript-grid-styling/#customizing-sass-variables
-$header-background-color: #616161;
-$header-foreground-color: #ffffff;
-$selected-color: #a5bfcc;
-$hover-color: #C6DBE6;
-$accent-color: #777777;
-$odd-row-background-color: #F0F0F0;
+$header-background-color: #F0F3F6;
+$header-foreground-color: #4C4B5E;
+$selected-color: #e6e7e7;
+$hover-color: #f2f5f7;
+$odd-row-background-color: #ffffff;
+$primary-color: #ff0e00;
+$ag-icon-checkbox-checked: "\e92f";
+$background-color: #ffffff;
 $font-family: "Source Sans Pro", sans-serif;
-@import "ag-grid-community/src/styles/ag-grid.scss";
-@import "ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham.scss";
+@import "~ag-grid-community/src/styles/ag-grid.scss";
+@import "~ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham.scss";
 .ag-theme-balham {
+  .ag-root {
+    border: none;
+}
+  
+.ag-header{
+  border-bottom: none;
+}
+
   .ag-header .ag-icon {
-    color: #000000;
-  }
+    color: hsl(222, 16%, 52%);
+}
   .ag-cell-focus {
     border-color: transparent !important;
-  }
+}
+  .ag-icon-checkbox-checked {
+    color: #FFFFFF !important;
+background-color: $primary-color;
+font-weight: bold;
+}
 
-  .ag-row{
-    background-color: red !important;
-  }
+.ag-header-cell-text{
+  text-transform: uppercase;
+}
+
+  .ag-header-cell::after,
+.ag-header-group-cell::after {
+    border-right: 1px solid #FFFFFF !important;
+}
+.ag-row.ag-row-hover {
+    border-bottom: 1px solid $primary-color !important;
+}
+  .ag-row {
+    padding: 3px;
+border-color: #eeeeee;
+}
 }
 .pagination-bar {
   background: linear-gradient(to bottom, #ffffff 0, #ffffff 100%);
-  padding: 7px 20px;
-  color: #666;
-  font-size: 12px;
-  line-height: 25px;
+padding: 7px 20px;
+color: #666;
+font-size: 12px;
+line-height: 25px;
   div {
     font-size: 12px;
-  }
+}
   i {
     font-size: 16px;
-    display: inline-block;
-    margin: 0 10px;
-    cursor: pointer;
-    font-weight: 600;
-    &.disabled {
+display: inline-block;
+margin: 0 10px;
+cursor: pointer;
+font-weight: 600;
+&.disabled {
       color: #aaa;
-      cursor: none;
-      pointer-events: none;
-    }
+cursor: none;
+pointer-events: none;
+}
   }
   .page-display {
     display: inline-block;
-    font-size: 12px;
+font-size: 12px;
     input {
       width: 32px;
-      height: 15px;
-      margin: 0 10px;
-      border: 1px solid #AAAAAA;
-      &:focus {
+height: 15px;
+margin: 0 10px;
+border: 1px solid #aaaaaa;
+&:focus {
         outline: none;
-      }
+}
     }
   }
   .fa-refresh {
     font-weight: 400;
-    font-size: 13px;
-  }
+font-size: 13px;
+}
   .total-display {
     float: right;
-  }
 }
+}
+
+
+
