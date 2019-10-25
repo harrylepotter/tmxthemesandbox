@@ -1,0 +1,24 @@
+{
+  "name": "tmxtheme",
+  "version": "3.0.0",
+  "description": "Live demo",
+  "keywords": [],
+  "homepage": "https://codesandbox.io/s/4j7m47vlm4",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/styles": "4.5.0",
+    "ag-grid-community": "21.0.1",
+    "ag-grid-react": "21.0.1",
+    "parcel": "1.12.4",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "parcel-bundler": "1.12.4"
+  }
+}
