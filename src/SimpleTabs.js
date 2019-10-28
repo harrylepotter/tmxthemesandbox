@@ -36,20 +36,28 @@ function a11yProps(index) {
   };
 }
 
+const tabsStyles = makeStyles(theme => ({
+  indicator: {
+    backgroundColor: "#CC0033"
+  }
+}));
+
 const useStyles = makeStyles(theme => ({
   root: {
-    // flexGrow: 1,
+    textTransform: 'uppercase',
+    fontSize: '14px',
+    fontFamily: 'Source Sans Pro',
     selected: {
       background: "#FF0000",
       boxShadow: "none"
-    },
-    // backgroundColor: '#FF0000',
-    marginLeft: "30px"
+    }
   }
 }));
 
 export default function SimpleTabs() {
   const classes = useStyles();
+  const tabsClasses = tabsStyles();
+
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -60,6 +68,7 @@ export default function SimpleTabs() {
     <div>
       {/* <AppBar position="static"> */}
       <Tabs
+        classes={tabsClasses}
         class="primary"
         value={value}
         onChange={handleChange}
@@ -71,8 +80,8 @@ export default function SimpleTabs() {
           label="Item One"
           {...a11yProps(0)}
         />
-        <Tab disableRipple="true" label="Item Two" {...a11yProps(1)} />
-        <Tab disableRipple="true" label="Item Three" {...a11yProps(2)} />
+        <Tab className={classes.root} disableRipple="true" label="Item Two" {...a11yProps(1)} />
+        <Tab className={classes.root} disableRipple="true" label="Item Three" {...a11yProps(2)} />
       </Tabs>
       {/* </AppBar> */}
       <TabPanel value={value} index={0}>
