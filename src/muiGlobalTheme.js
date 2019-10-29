@@ -54,18 +54,14 @@ export default createMuiTheme({
           fontWeight: 600,
           border: "solid 1px #D5DFE9",
           background: "#FF0000"
-          // backgroundColor: "#35C37D",
-          // // Reset on touch devices, it doesn't add specificity
-          // "@media (hover: none)": {
-          //   backgroundColor: "#35C37D"
-          // }
         },
         "&:disabled": {
           opacity: "0.5"
         },
         "&:active": {
           background: "#FFFFFF",
-          boxShadow: "none"
+          boxShadow: "none",
+          border: 'solid 2px #D5DFE9'
         }
       },
       textPrimary: {
