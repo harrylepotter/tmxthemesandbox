@@ -1,5 +1,6 @@
 // COLOR
-export const PRIMARY_COLOR = "#FF0E00";
+export const PRIMARY_COLOR = "#CC0033";
+export const SECONDARY_COLOR = "#66C420";
 export const BODY_BACKGROUND_COLOR = "#fafbfc";
 export const BACKGROUND_COLOR = "#FFFFFF";
 export const COLOR_WHITE = "white";

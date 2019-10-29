@@ -13,7 +13,9 @@ const useTabsStyles = makeStyles(() => ({
     borderBottom: 'none'
   },
   root:{
-    marginBottom: '-2px'
+    height: '42px',
+    minHeight: '42px',
+    marginBottom: '-1px'
   }
 }));
 
@@ -32,22 +34,24 @@ const useTabStyles = makeStyles(({ palette, spacing, breakpoints }) => {
     root: ({ bgColor = defaultBgColor, minWidth = defaultMinWidth }) => ({
       opacity: 1,
       overflow: "initial",
-      paddingLeft: spacing(2),
-      paddingRight: spacing(2),
+      paddingLeft: '10px',
+      paddingRight: '10px',
       borderTopLeftRadius: '2px',
       borderTopRightRadius: '2px',
-      borderTop: 'solid 2px #D5DFE9',
-      borderRight: 'solid 2px #D5DFE9',
+      borderLeft: 'solid 1px rgb(180,180,180)',
+      borderTop: 'solid 1px rgb(180,180,180)',
+      borderRight: 'solid 1px rgb(180,180,180)',
       borderBottom: 'none',
       color: '#98A1B1',
+      fontFamily: 'source sans pro',
+      fontSize: '15px',
       backgroundColor: 'transparent',
       transition: "0.2s",
-      [breakpoints.up("md")]: {
-        minWidth: minWidth.md
-      },
-      "&:first-of-type":{
-        borderLeft: 'solid 2px #D5DFE9'
-      },
+      marginRight: '5px',
+      minWidth: '30px',
+      // [breakpoints.up("md")]: {
+      //   minWidth: minWidth.md
+      // },
       "&:before": {
         transition: "0.2s"
       },
@@ -68,8 +72,7 @@ const useTabStyles = makeStyles(({ palette, spacing, breakpoints }) => {
     selected: ({ selectedBgColor = defaultSelectedBgColor }) => ({
       backgroundColor: selectedBgColor,
       marginBottom: '-2px',
-      fontWeight: 600,
-      color: getTextColor(selectedBgColor),
+      color: 'rgb(204,0,51)',
       "& + $root": {
         zIndex: 1
       },
@@ -79,7 +82,7 @@ const useTabStyles = makeStyles(({ palette, spacing, breakpoints }) => {
     }),
     wrapper: {
       zIndex: 2,
-      marginTop: spacing(0.5),
+      marginTop: '-5px',
       textTransform: "initial"
     }
   };

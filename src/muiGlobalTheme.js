@@ -4,7 +4,7 @@ import * as cssVariables from "./variables";
 export default createMuiTheme({
   palette: {
     primary: { main: cssVariables.PRIMARY_COLOR },
-    secondary: { main: cssVariables.PRIMARY_COLOR }
+    secondary: { main: cssVariables.SECONDARY_COLOR }
   },
   overrides: {
     MuiTypography: {

@@ -44,12 +44,13 @@ const tabsStyles = makeStyles(theme => ({
 
 const useStyles = makeStyles(theme => ({
   root: {
+    minWidth: '10px',
     textTransform: 'uppercase',
     fontSize: '14px',
     fontFamily: 'Source Sans Pro',
-    selected: {
-      background: "#FF0000",
-      boxShadow: "none"
+    color: 'rgb(138,146,166)',
+    '&[aria-selected="true"]': {
+      color: 'black'
     }
   }
 }));

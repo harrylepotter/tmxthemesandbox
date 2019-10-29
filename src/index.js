@@ -26,7 +26,7 @@ function App() {
           elevation={0}
           style={{ backgroundColor: "#FAFBFC" }}
         >
-          <Toolbar style={{borderBottom: 'solid 2px #D5DFE9'}}>
+          <Toolbar style={{borderBottom: 'solid 1px rgb(180,180,180)'}}>
             <TMXPrimaryTabs
               style={{ alignSelf: "flex-end" }}
               tabs={[
